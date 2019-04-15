@@ -2,12 +2,11 @@
 
 Run container:
 
-docker run -dit -v $(pwd)/sql_scripts:/sql_scripts postgres:latest
+    docker run -dit -v $(pwd)/sql_scripts:/sql_scripts postgres:latest
 
 Exec Postgres Shell and create database:
 
-docker exec -it <ID_CONTAINER> psql -U postgres
-
+    docker exec -it <ID_CONTAINER> psql -U postgres
     psql (11.2 (Debian 11.2-1.pgdg90+1))
     Type "help" for help.
 
@@ -16,8 +15,8 @@ docker exec -it <ID_CONTAINER> psql -U postgres
 
 Create tables in our database:
 
-docker exec -it <ID_CONTAINER> psql -U postgres -d hospital -f /sql_scripts/script.sql
+    docker exec -it <ID_CONTAINER> psql -U postgres -d hospital -f /sql_scripts/script.sql
 
 Insert data in our database:
 
-docker exec -it <ID_CONTAINER> psql -U postgres -d hospital -f /sql_scripts/insert_script.sql
+    docker exec -it <ID_CONTAINER> psql -U postgres -d hospital -f /sql_scripts/insert_script.sql
