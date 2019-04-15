@@ -1,5 +1,3 @@
-CREATE DATABASE hospital;
-
 CREATE TABLE Physician (
   EmployeeID INTEGER PRIMARY KEY NOT NULL,
   Name TEXT NOT NULL,
